@@ -1,0 +1,193 @@
+.form-section {
+    padding: 10px 0;
+
+    .logo-container {
+        text-align: center;
+    }
+
+    .sub-logos {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+
+        .mint,
+        .quickbooks,
+        .turbotax {
+            display: flex;
+            align-items: center;
+        }
+
+        .quickbooks {
+            margin: 0 10px;
+        }
+
+        .sub-logo {
+            width: 22px;
+            height: 22px;
+            margin-right: 5px;
+        }
+    }
+
+    .form-container {
+        border: 1px solid rgb(180, 180, 180);
+        border-radius: 2px;
+        background-color: white;
+        width: 400px;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 14px;
+
+        .form-title {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        a {
+            color: $blue;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .form-text {
+            color: gray;
+            line-height: 1.5;
+        }
+    }
+
+    form {
+        margin: 20px 0;
+
+        label,
+        small,
+        button {
+            display: block;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        input {
+            width: 90%;
+            border-radius: 2px;
+            border: 1px solid rgb(180, 180, 180);
+            padding: 10px;
+            &::placeholder {
+                color: rgb(214, 214, 214);
+            }
+            &:focus {
+                border-color: #0084db;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        label {
+            text-align: left;
+            color: rgb(70, 70, 70);
+            margin: 30px auto 10px auto;
+            width: 90%;
+        }
+
+        small {
+            width: 90%;
+            margin: 5px auto 0 auto;
+            text-align: left;
+            color: rgb(99, 99, 99);
+        }
+
+        button {
+            color: white;
+            background-color: $blue;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            width: 90%;
+            margin: 30px auto 0 auto;
+            padding: 12px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                background-color: #0084db;
+            }
+
+            span {
+                &:first-child {
+                    align-self: flex-end;
+                    margin-right: 20px;
+                }
+                &:last-child {
+                    font-size: 20px;
+                }
+            }
+
+            img {
+                width: 20px;
+                height: 25px;
+            }
+        }
+
+        .password {
+            border: 1px solid red;
+            width: 90%;
+            margin: auto;
+            border: 1px solid rgb(180, 180, 180);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+
+            input {
+                border: none;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            span {
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &:focus-within {
+                border-color: #0084db;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .terms {
+        text-align: center;
+        width: 90%;
+        margin: 10px auto 50px auto;
+        color: gray;
+        font-style: italic;
+        font-size: 14px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    footer {
+        font-size: 10px;
+        color: gray;
+        background: #ECEEF1;
+        padding: 20px 0;
+        border-radius: 0 0 2px 2px;
+    }
+}
+
+@media (min-width: 770px) {
+    .form-section {
+        .form-container {
+            .signIn {
+                display: none;
+            }
+        }
+    }
+}
